@@ -16,4 +16,10 @@ public class EggController : MonoBehaviour
     {
         
     }
+    private void OnDestroy()
+    {
+        Debug.Log("º”“ª∑÷");
+        if (GameManager.Instance != null)
+            GameManager.Instance.AddScore(1);
+    }
 }
