@@ -25,7 +25,7 @@ TagManager:
   - 
   - 
   - 
-  - 
+  - BG
   - 
   - 
   - 
@@ -40,4 +40,10 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: New Layer 1
+    uniqueID: 2852648961
+    locked: 0
+  - name: New Layer 2
+    uniqueID: 391299821
     locked: 0
