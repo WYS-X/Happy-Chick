@@ -29,6 +29,6 @@ public class AutoBlink : MonoBehaviour
 
     void SetRandomInterval()
     {
-        blinkInterval = Random.Range(3f, 6f);
+        blinkInterval = Random.Range(2f, 5f);
     }
 }
