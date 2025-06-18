@@ -6,15 +6,17 @@ public class PlayerController : MonoBehaviour
 {
     public float Speed = 8f;
     private Vector2 position;
-    private bool isMoving = false;
     public GameObject eggPrefab;
     public Transform eggSpawnPoint;
 
+    private bool IsLaying = false;
+    private bool IsWalking = false;
 
+    private Animator ani;
     // Start is called before the first frame update
     void Start()
     {
-        
+        ani = GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -28,18 +30,20 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            isMoving = true;
+            IsWalking = true;
+            ani.SetBool(nameof(IsWalking), true);
             position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
     void HandleMovement()
     {
-        if (isMoving)
+        if (IsWalking)
         {
             transform.position = Vector2.MoveTowards(transform.position, position, Speed * Time.deltaTime);
             if (Vector2.Distance(transform.position, position) < 0.01f)
             {
-                isMoving = false;
+                IsWalking = false;
+                ani.SetBool(nameof(IsWalking), false);
                 LayEgg();
             }
         }
@@ -57,6 +61,8 @@ public class PlayerController : MonoBehaviour
     {
         if(eggPrefab != null && eggSpawnPoint != null)
         {
+            IsLaying = true;
+            ani.SetBool(nameof(IsLaying), true);
             Instantiate(eggPrefab, eggSpawnPoint.position, Quaternion.identity);
         }
 
