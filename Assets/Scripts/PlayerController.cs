@@ -30,8 +30,11 @@ public class PlayerController : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            IsWalking = true;
-            ani.SetBool(nameof(IsWalking), true);
+            if (!IsWalking)
+            {
+                ani.SetBool(nameof(IsWalking), true);
+                IsWalking = true;
+            }
             position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         }
     }
@@ -62,8 +65,8 @@ public class PlayerController : MonoBehaviour
         if(eggPrefab != null && eggSpawnPoint != null)
         {
             IsLaying = true;
-            ani.SetBool(nameof(IsLaying), true);
-            Instantiate(eggPrefab, eggSpawnPoint.position, Quaternion.identity);
+            ani.SetTrigger("Laying");
+            //Instantiate(eggPrefab, eggSpawnPoint.position, Quaternion.identity);
         }
 
     }
