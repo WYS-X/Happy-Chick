@@ -429,7 +429,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Speed: 8
-  eggPrefab: {fileID: 2162592371671192936, guid: a2f84b547e5ad89438082dbd56e6fe8d, type: 3}
+  eggPrefab: {fileID: 917777659118078790, guid: a2f84b547e5ad89438082dbd56e6fe8d, type: 3}
   eggSpawnPoint: {fileID: 1066175399}
 --- !u!4 &348658159
 Transform:
