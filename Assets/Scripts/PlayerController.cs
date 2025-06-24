@@ -66,9 +66,13 @@ public class PlayerController : MonoBehaviour
         {
             IsLaying = true;
             ani.SetTrigger("Laying");
-            Instantiate(eggPrefab, eggSpawnPoint.position, Quaternion.identity);
         }
 
+    }
+    public void AddEgg()
+    {
+        GameManager.Instance.AddScore(1);
+        Instantiate(eggPrefab, eggSpawnPoint.position, Quaternion.identity);
     }
     public void Eat()
     {

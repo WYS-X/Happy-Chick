@@ -4,11 +4,12 @@ using UnityEngine;
 
 public class EggController : MonoBehaviour
 {
-    public float leftTime = 5f;
+    public float leftTime = 6f;
+    private Animator ani;
     void Start()
     {
-        Destroy(gameObject, leftTime);
-
+        ani = GetComponent<Animator>();
+        Invoke(nameof(PlayLay), leftTime);
     }
 
     // Update is called once per frame
@@ -16,10 +17,17 @@ public class EggController : MonoBehaviour
     {
         
     }
-    private void OnDestroy()
+
+    void PlayLay()
     {
-        Debug.Log("º”“ª∑÷");
-        if (GameManager.Instance != null)
-            GameManager.Instance.AddScore(1);
+        if(ani != null)
+        {
+            ani.SetTrigger("Crack");
+        }
+    }
+
+    public void Remove()
+    {
+        GetComponent<FadeOutAdnDestroy>()?.StartFadeOut();
     }
 }

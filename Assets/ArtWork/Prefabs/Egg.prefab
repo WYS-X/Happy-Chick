@@ -11,6 +11,8 @@ GameObject:
   - component: {fileID: 6323198422491100734}
   - component: {fileID: 4647663174715506106}
   - component: {fileID: 2854186419554016294}
+  - component: {fileID: -2333090957455581642}
+  - component: {fileID: 4177906415504605110}
   m_Layer: 0
   m_Name: Egg
   m_TagString: Untagged
@@ -106,3 +108,29 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &-2333090957455581642
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917777659118078790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ca4b7867ccbfc0439bfc8c33c92e4f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  leftTime: 6
+--- !u!114 &4177906415504605110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 917777659118078790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c8c91228ef00b44aa56902ac7536c88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  duration: 1.5
