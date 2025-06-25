@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   leftTime: 6
+  Chick: {fileID: 5322806475939777180, guid: 3530b448b8113314380993ebd313159f, type: 3}
 --- !u!114 &4177906415504605110
 MonoBehaviour:
   m_ObjectHideFlags: 0

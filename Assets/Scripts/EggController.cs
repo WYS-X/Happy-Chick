@@ -6,6 +6,7 @@ public class EggController : MonoBehaviour
 {
     public float leftTime = 6f;
     private Animator ani;
+    public GameObject Chick;
     void Start()
     {
         ani = GetComponent<Animator>();
