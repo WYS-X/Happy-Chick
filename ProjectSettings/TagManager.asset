@@ -41,9 +41,12 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: New Layer 1
+  - name: Chick
+    uniqueID: 1058215055
+    locked: 0
+  - name: Egg
     uniqueID: 2852648961
     locked: 0
-  - name: New Layer 2
+  - name: Palyer
     uniqueID: 391299821
     locked: 0
