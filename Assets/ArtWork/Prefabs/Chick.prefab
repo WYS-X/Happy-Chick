@@ -192,7 +192,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3255284897684352694}
-  - component: {fileID: 7790562109757876039}
   - component: {fileID: 836550436100801381}
   m_Layer: 0
   m_Name: Chick
@@ -219,21 +218,6 @@ Transform:
   - {fileID: 4757240133277049138}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7790562109757876039
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5322806475939777180}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efff140442d53c34aa5c601659f39a09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Speed: 8
-  eggPrefab: {fileID: 917777659118078790, guid: a2f84b547e5ad89438082dbd56e6fe8d, type: 3}
-  eggSpawnPoint: {fileID: 406578243435210936}
 --- !u!95 &836550436100801381
 Animator:
   serializedVersion: 5
