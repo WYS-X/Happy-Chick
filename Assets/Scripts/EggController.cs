@@ -29,6 +29,7 @@ public class EggController : MonoBehaviour
     }
     public void AddSubChick()
     {
+        var position = transform.position;
         var obj = Instantiate(Chick, transform.position, Quaternion.identity);
         obj.transform.localScale = new Vector3(0.7f, 0.7f, 0.35f);
     }
