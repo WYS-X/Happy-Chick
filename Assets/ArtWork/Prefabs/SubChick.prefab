@@ -80,7 +80,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1fee0e590fd62a42b0ae463e02bbbf5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delay: 6
+  delay: 0.3
+  Speed: 3
+  blinkTriggerName: Blink
+  chirpTriggerName: Chirp
+  blinkInterval: 3
 --- !u!212 &-4395059162825278374
 SpriteRenderer:
   m_ObjectHideFlags: 0

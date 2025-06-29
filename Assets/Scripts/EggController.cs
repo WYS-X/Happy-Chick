@@ -12,6 +12,10 @@ public class EggController : MonoBehaviour
     {
         ani = GetComponent<Animator>();
         Invoke(nameof(PlayLay), leftTime);
+        if (Chick != null)
+        {
+            Chick.transform.localScale = new Vector3(1.5f, 1.5f, 0f);
+        }
     }
 
     // Update is called once per frame
@@ -31,7 +35,6 @@ public class EggController : MonoBehaviour
     {
         var position = transform.position;
         var obj = Instantiate(Chick, transform.position, Quaternion.identity);
-        obj.transform.localScale = new Vector3(0.7f, 0.7f, 0.35f);
     }
     public void Remove()
     {

@@ -17,6 +17,11 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         ani = GetComponent<Animator>();
+
+        if(eggPrefab != null)
+        {
+            eggPrefab.transform.localScale = new Vector3(2.7f, 2.7f, 0f);
+        }
     }
 
     // Update is called once per frame
@@ -24,6 +29,7 @@ public class PlayerController : MonoBehaviour
     {
         HandleClick();
         HandleMovement();
+        HandleIdle();
     }
 
     void HandleClick()
@@ -49,6 +55,31 @@ public class PlayerController : MonoBehaviour
                 ani.SetBool(nameof(IsWalking), false);
                 LayEgg();
             }
+        }
+    }
+
+    void HandleIdle()
+    {
+        if (ani?.HasState(0, Animator.StringToHash("Idle")) == true)
+        {
+            SetRandomInterval();
+        }
+    }
+    public string blinkTriggerName = "Blink";
+    public string chirpTriggerName = "Chirp";
+    private float timer = 0f;
+    public float blinkInterval = 3f;
+    void SetRandomInterval()
+    {
+        timer += Time.deltaTime;
+        if (timer >= blinkInterval)
+        {
+            if(Random.value > 0.3)
+                ani.SetTrigger(blinkTriggerName);
+            else
+                ani.SetTrigger(chirpTriggerName);
+            timer = 0f;
+            blinkInterval = Random.Range(3f, 6f);
         }
     }
 
